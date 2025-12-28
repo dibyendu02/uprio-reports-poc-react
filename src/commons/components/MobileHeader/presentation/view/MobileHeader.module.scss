@@ -1,0 +1,11 @@
+.mobile-header {
+    @apply sticky flex gap-3 top-0 z-[60] bg-primary-1000 p-[12px] md:hidden; // Visible only on mobile, sticky
+
+    .menu-icon {
+        @apply w-[24px] h-[24px] cursor-pointer;
+    }
+
+    .logo {
+        @apply w-20 h-6;
+    }
+}

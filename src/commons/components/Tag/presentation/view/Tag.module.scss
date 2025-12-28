@@ -1,0 +1,71 @@
+.tag {
+  @apply flex items-center justify-between gap-[4px] bg-neutral-100 rounded-[24px] px-[8px] py-[2px];
+
+  &.badge {
+    @apply py-[1px];
+  }
+
+  &.has-img {
+    @apply pl-[2px];
+  }
+
+  .text {
+    @apply p303 text-neutral-800;
+  }
+
+  img {
+    @apply w-[18px] h-[18px];
+  }
+
+  &.bordered {
+    @apply border-[1px] border-neutral-400 bg-neutral-100;
+  }
+
+  &.success {
+    @apply border-semantic-success-900 bg-semantic-success-100;
+
+    .text {
+      @apply text-semantic-success-800 #{!important};
+    }
+  }
+
+  &.error {
+    @apply border-semantic-error-800 bg-semantic-error-100;
+
+    .text {
+      @apply text-semantic-error-800 #{!important};
+    }
+  }
+
+  &.primary {
+    @apply border-primary-900 bg-primary-100;
+
+    .text {
+      @apply text-primary-900 #{!important};
+    }
+  }
+
+  &.secondary {
+    @apply border-secondary-600 bg-secondary-150;
+
+    .text {
+      @apply text-secondary-800 #{!important};
+    }
+  }
+
+  &.accent-purple {
+    @apply border-accent-purple-600 bg-accent-purple-100;
+
+    .text {
+      @apply text-accent-purple-800 #{!important};
+    }
+  }
+
+  &.accent-orange {
+    @apply border-accent-orange-900 bg-accent-orange-100;
+
+    .text {
+      @apply text-accent-orange-900 #{!important};
+    }
+  }
+}

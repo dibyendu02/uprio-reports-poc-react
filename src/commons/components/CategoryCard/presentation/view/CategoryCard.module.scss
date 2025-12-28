@@ -1,0 +1,112 @@
+.category-card {
+  @apply relative bg-white rounded-[12px] p-[12px] cursor-pointer border border-neutral-100;
+
+  &::before {
+    content: "";
+    @apply absolute top-[12px] h-[calc(100%-24px)] left-0 rounded-tr-[12px] rounded-br-[12px] w-[4px];
+  }
+
+  &.status-success {
+    &::before {
+      @apply md:bg-semantic-success-500;
+    }
+
+    .card-content {
+      .title {
+        .count-wrapper {
+          .category-count {
+            @apply bg-semantic-success-100 text-semantic-success-800;
+          }
+        }
+      }
+    }
+  }
+
+  &.status-orange {
+    &::before {
+      @apply bg-accent-orange-300;
+    }
+
+    .card-content {
+      .title {
+        .count-wrapper {
+          .category-count {
+            @apply bg-accent-orange-100 text-accent-orange-900;
+          }
+        }
+      }
+    }
+  }
+
+  &.status-error {
+    &::before {
+      @apply bg-semantic-error-500;
+    }
+
+    .card-content {
+      .title {
+        .count-wrapper {
+          .category-count {
+            @apply bg-semantic-error-100 text-semantic-error-800;
+          }
+        }
+      }
+    }
+  }
+
+  &.status-neutral {
+    &::before {
+      @apply bg-neutral-400;
+    }
+
+    .card-content {
+      .title {
+        .count-wrapper {
+          .category-count {
+            @apply bg-neutral-100 text-neutral-950;
+          }
+        }
+      }
+    }
+  }
+
+  .card-header {
+    @apply mb-[12px];
+
+    .sub-title {
+      @apply flex items-center justify-between mb-[4px];
+
+      h2 {
+        @apply text-neutral-300 p302;
+      }
+
+      img {
+        @apply w-[20px] h-[20px];
+      }
+    }
+
+    .title {
+      @apply flex items-center justify-between gap-[4px] text-neutral-900 text-[14px];
+
+      h3 {
+        @apply text-neutral-950 max-w-full sh201;
+      }
+    }
+  }
+
+  .card-content {
+    @apply flex flex-col gap-[24px] py-[8px] px-[4px] bg-neutral-50 rounded-[8px];
+
+    .progress-wrap {
+      @apply flex items-center justify-start gap-[4px];
+
+      span:first-of-type {
+        @apply text-neutral-500 p202;
+      }
+
+      span:last-of-type {
+        @apply text-neutral-900 p302;
+      }
+    }
+  }
+}

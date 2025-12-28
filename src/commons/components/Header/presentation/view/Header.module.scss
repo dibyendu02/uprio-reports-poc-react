@@ -1,0 +1,41 @@
+.header-wrapper {
+  @apply md:sticky top-0 z-[60] md:py-4;
+}
+
+.header {
+  @apply flex flex-col md:flex-row items-center justify-between md:bg-primary-1000 rounded-[12px] p-[12px];
+
+  box-shadow: none;
+
+  @media (min-width: 768px) {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Shadow for md screens and above
+  }
+
+  .left-wrap {
+    @apply flex-1 w-full md:max-w-xs;
+  }
+
+  .right-wrap {
+    @apply flex items-center gap-[12px] mt-3 md:mt-0;
+
+    .dropdown-wrapper {
+      @apply flex md:w-[343px];
+    }
+
+    .icon-button-wrapper {
+      @apply flex items-center;
+    }
+
+    @media (max-width: 768px) {
+      @apply justify-between w-full;
+
+      .dropdown-wrapper {
+        @apply flex-grow;
+      }
+
+      .icon-button-wrapper {
+        @apply ml-auto;
+      }
+    }
+  }
+}

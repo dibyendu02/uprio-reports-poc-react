@@ -1,0 +1,25 @@
+.segment-control {
+  @apply relative flex bg-neutral-200 md:bg-neutral-900 rounded-[8px] overflow-hidden p-[2px] gap-[2px] w-full;
+
+  position: relative;
+
+  .highlight {
+    @apply absolute bg-secondary-500 transition-transform duration-200;
+    top: 2px;
+    left: 2px;
+    height: calc(100% - 4px); // Adjust for top and bottom padding
+    z-index: 0;
+    border-radius: 6px; // Adjust if needed
+  }
+
+  .segment-button {
+    @apply flex-1 py-2 text-center bg-transparent text-neutral-500  md:text-neutral-200 focus:outline-none sh201;
+    position: relative;
+    // z-index: 1;
+
+    &.active {
+      @apply text-white;
+      // Background is handled by the highlight div
+    }
+  }
+}

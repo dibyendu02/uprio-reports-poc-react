@@ -1,0 +1,64 @@
+.chapter-card {
+  @apply relative bg-white rounded-[12px] border-[2px] border-transparent p-[12px] transition-all duration-200;
+
+  &:hover:not(.selected) {
+    @apply md:border-primary-100;
+  }
+
+  &.selected {
+    @apply md:border-primary-300 border-solid;
+    box-shadow: 0px 16px 32px -4px rgba(12, 12, 13, 0.1);
+
+    &::before {
+      content: "";
+      @apply absolute top-[12px] h-[calc(100%-24px)] left-[-2px] w-1 md:bg-primary-700 rounded-r;
+    }
+  }
+  &.hover-active {
+    @apply relative z-[200];
+    box-shadow: 0px 16px 32px -4px rgba(12, 12, 13, 0.1);
+
+    // Ensure smooth transitions
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.fixed {
+  z-index: 210; /* Ensure the InfoCard tooltip is above everything */
+}
+
+.card-header {
+  @apply mb-[12px] cursor-pointer; // Apply cursor-pointer here only
+
+  .title {
+    @apply flex text-neutral-950 items-center mb-[4px] justify-between sh201;
+  }
+
+  .sub-title {
+    @apply p302 text-neutral-300;
+  }
+}
+
+.card-content {
+  @apply flex flex-col gap-[12px] p-[8px] bg-neutral-50 rounded-[8px];
+
+  .card-item {
+    @apply flex items-center justify-start p302 text-neutral-300;
+
+    .icon-wrap {
+      @apply w-[32px] h-[32px] p-[7px] rounded-[50%] border-[1px] border-solid border-neutral-100 mr-[8px];
+
+      img {
+        @apply w-[18px] h-[18px];
+      }
+    }
+
+    span {
+      @apply p202 text-neutral-600 mr-[4px];
+
+      &.number {
+        @apply p203 text-neutral-900;
+      }
+    }
+  }
+}

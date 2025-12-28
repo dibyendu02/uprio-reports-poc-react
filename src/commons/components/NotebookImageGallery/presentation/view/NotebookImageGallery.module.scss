@@ -1,0 +1,77 @@
+.notebook-gallery-wrap {
+  @apply relative bg-white w-full h-full rounded-[24px] flex flex-col items-center overflow-hidden;
+
+  .header {
+    @apply flex items-center justify-between bg-white p-[24px] w-full absolute z-10;
+    box-shadow: 0px 16px 32px -4px #0c0c0d0d;
+
+    h4 {
+      @apply sh102 text-neutral-950;
+    }
+
+    img {
+      @apply w-[20px] h-[20px] cursor-pointer;
+    }
+  }
+
+  .carousel-wrap {
+    @apply flex items-center justify-between relative w-full h-full overflow-hidden px-3 md:px-[40px] pb-[68px] bg-white mt-[72px];
+
+    .carousel-images-wrap {
+      @apply flex items-center justify-center w-full h-full bg-neutral-100 rounded-[12px] overflow-hidden p-[17.5px] md:p-10;
+
+      .carousel-images {
+        @apply flex transition-transform duration-300 ease-in-out h-full rounded-[16px];
+
+        div {
+          @apply flex justify-center items-center w-full h-full flex-shrink-0;
+        }
+
+        img {
+          @apply max-w-full max-h-full object-contain;
+        }
+      }
+
+      .navigation-wrap {
+        @apply absolute top-0 left-0 right-0 h-full flex items-center justify-between px-[20px];
+
+        span {
+          @apply p-[10px] mt-[-20px] rounded-[50%] cursor-pointer transition-all duration-200;
+
+          &.prev-button {
+            @apply bg-neutral-400; // Red background for previous button
+            img {
+              @apply rotate-180;
+            }
+            &.disabled {
+              @apply hidden bg-neutral-400 cursor-not-allowed;
+            }
+          }
+
+          &.next-button {
+            @apply bg-primary-800; // Green background for next button
+            &.disabled {
+              @apply hidden bg-neutral-400 cursor-not-allowed;
+            }
+          }
+        }
+      }
+    }
+
+    .indicators {
+      @apply absolute bottom-[40px] left-0 right-0 flex items-center justify-center gap-[8px] mt-[16px];
+
+      .dot {
+        @apply w-[8px] h-[8px] bg-neutral-300 rounded-full cursor-pointer transition-all duration-200;
+
+        &.active {
+          @apply bg-primary-900;
+        }
+      }
+    }
+  }
+}
+
+.notebook-image {
+  @apply rounded-[16px];
+}

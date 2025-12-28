@@ -1,0 +1,23 @@
+.info-card {
+  @apply flex flex-col bg-white rounded-[12px] shadow-lg p-[8px] w-full md:w-[320px] z-40;
+
+  .image-wrapper {
+    @apply w-full h-[200px] overflow-hidden rounded-[12px];
+
+    img {
+      @apply w-full h-full object-cover;
+    }
+  }
+
+  .content {
+    @apply flex flex-col p-[12px];
+
+    .title {
+      @apply text-h203 font-semibold font-sora text-neutral-950 mb-2;
+    }
+
+    .description {
+      @apply text-p201 text-neutral-400 leading-relaxed font-poppins;
+    }
+  }
+}

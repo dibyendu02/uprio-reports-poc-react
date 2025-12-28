@@ -1,0 +1,99 @@
+.post-intervention-card {
+  @apply relative bg-white rounded-[12px] px-[12px] lg:w-[498px] lg:h-[478px];
+
+  &::before {
+    content: "";
+    @apply absolute top-4 bottom-4 left-[-2px] w-1 rounded-r bg-semantic-success-500;
+  }
+
+  &.selected {
+    @apply md:border-[2px] border-secondary-200;
+
+    &::before {
+      @apply absolute top-4 bottom-4 left-[-2px] w-1 md:w-[4px] md:bg-secondary-500 rounded-r;
+    }
+  }
+
+  .header {
+    @apply flex justify-between pt-[12px];
+
+    .title {
+      @apply sh201;
+
+      .category-count {
+        @apply text-neutral-400;
+      }
+    }
+  }
+
+  .content {
+    @apply lg:border border-neutral-50   rounded-[12px] lg:h-[417px] mt-[12px];
+
+    .table-header {
+      @apply hidden bg-[#EDF9FF] h-[42px] rounded-t-[12px] pr-[12px] lg:block;
+
+      .header-content {
+        @apply inline-flex items-center justify-end gap-[54px] w-full h-[42px];
+
+        .column-title {
+          @apply p302;
+        }
+      }
+    }
+
+    .category-row {
+      @apply py-[16px] lg:px-[20px] lg:flex lg:justify-between;
+
+      &:not(:last-child) {
+        @apply border-b border-neutral-50;
+      }
+
+      .category-content {
+        @apply w-full lg:flex lg:justify-between   lg:items-start;
+
+        .rating-section {
+          @apply flex flex-col gap-[4px] lg:w-[250px];
+
+          .stars {
+            @apply flex;
+
+            .star {
+              @apply w-5 h-5;
+              margin-right: 2px;
+
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+          }
+
+          .category-title {
+            @apply sh201;
+          }
+        }
+
+        .intervention-data {
+          @apply bg-[#FAFAFC] lg:bg-transparent mt-[8px] rounded-[8px] lg:mt-0 lg:flex-1;
+
+          .data-content {
+            @apply p-[12px] flex gap-[20px] lg:justify-end;
+
+            .pre-intervention,
+            .post-intervention {
+              @apply w-fit lg:w-[100px];
+
+              .mobile-label {
+                @apply p302 lg:hidden mb-2;
+              }
+            }
+
+            .count-wrapper,
+            .count-badge {
+              @apply inline-flex px-[6px] py-[1px] rounded-[24px] w-fit;
+            }
+          }
+        }
+      }
+    }
+  }
+}

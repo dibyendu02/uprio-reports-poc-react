@@ -1,0 +1,132 @@
+.post-intervention-qc-card {
+  @apply relative bg-white rounded-[12px]  p-[16px];
+  @apply flex flex-col p-[12px] pl-[16px];
+
+  &.selected {
+    @apply border-solid;
+
+    &::before {
+      content: "";
+      @apply absolute top-[12px] h-[calc(100%-24px)] left-0 w-1  bg-semantic-error-500 rounded-r;
+    }
+
+    &.improved {
+      &::before {
+        @apply bg-semantic-success-500;
+      }
+    }
+
+    &.same-as-before {
+      &::before {
+        @apply bg-accent-orange-400;
+      }
+    }
+  }
+
+  /* Card Header */
+  .card-header {
+    @apply mb-[12px];
+
+    .card-title-container {
+      @apply flex items-center justify-between mb-[4px];
+
+      img {
+        @apply w-[20px] h-[20px];
+      }
+    }
+
+    label {
+      @apply text-neutral-300 p302;
+    }
+
+    .category-title {
+      @apply text-neutral-950 sh201 max-w-[250px];
+    }
+  }
+
+  /* Card Content */
+  .card-content {
+    @apply flex flex-col gap-[16px] bg-[#FAFBFB] p-[16px] rounded-[8px] relative;
+
+    &::before {
+      content: "";
+      // Add a vertical divider line at the center of the card-content using absolute and responsive styles
+      @apply absolute top-[8px] h-[calc(100%-16px)] left-[calc(50%-1px)] w-[1px] bg-neutral-100;
+    }
+
+    .stars-row {
+      @apply flex flex-row items-start sm:items-center justify-between gap-[16px];
+
+      .star-group {
+        @apply flex flex-col gap-[12px];
+
+        label {
+          @apply text-neutral-950 p302;
+        }
+
+        .stars {
+          @apply flex gap-[0];
+
+          img {
+            @apply w-[24px] h-[24px];
+          }
+        }
+      }
+    }
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 12px;
+
+    .improvement-row {
+      @apply flex items-center justify-start w-full gap-[4px];
+
+      label {
+        @apply text-neutral-500 p202;
+      }
+
+      .improvement-icon {
+        @apply w-[24px] h-[24px];
+      }
+
+      .improvement-text {
+        @apply p303 font-semibold;
+      }
+    }
+
+    .remarks-row {
+      @apply mt-[12px] p-[8px] rounded-[8px] bg-secondary-50 w-full;
+
+      .remarks-label {
+        @apply p303 font-semibold text-secondary-900;
+      }
+
+      .remarks-text {
+        @apply p302 text-secondary-900;
+      }
+    }
+  }
+}
+
+/* ====== Variants for improvement status ====== */
+.improved {
+  .improvement-row .improvement-text {
+    @apply text-semantic-success-900;
+  }
+}
+
+.drop-in-performance {
+  .improvement-row .improvement-text {
+    @apply text-red-600;
+  }
+}
+
+.same-as-before {
+  .improvement-row .improvement-text {
+    @apply text-yellow-700;
+  }
+}

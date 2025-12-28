@@ -1,0 +1,23 @@
+{
+  "chapters": [
+    {
+      "chapterId": 1,
+      "subjectId": 1,
+      "title": "Rational Numbers",
+      "dateRange": "23 May - 28 May, 2024"
+    },
+    {
+      "chapterId": 2,
+      "subjectId": 1,
+      "title": "Numeral System",
+      "dateRange": "19 May - 21 May, 2024"
+    },
+    {
+      "chapterId": 3,
+      "subjectId": 1,
+      "title": "Quadralateral",
+      "description": "Quadralateral description",
+      "dateRange": "20 May - 22 May, 2024"
+    }
+  ]
+}

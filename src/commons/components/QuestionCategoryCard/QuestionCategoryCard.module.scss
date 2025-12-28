@@ -1,0 +1,112 @@
+.question-category-card {
+  @apply relative bg-white rounded-[12px] px-[16px] py-[12px] cursor-pointer flex items-center;
+
+  &::before {
+    content: "";
+    @apply absolute top-4 bottom-4 left-[-2px] w-1   rounded-r;
+  }
+
+  &.status-success {
+    &::before {
+      @apply bg-semantic-success-500;
+    }
+
+    .card-content {
+      .title {
+        .count-wrapper {
+          .category-count {
+            @apply bg-semantic-success-100 text-semantic-success-800;
+          }
+        }
+      }
+    }
+  }
+
+  &.status-orange {
+    &::before {
+      @apply bg-accent-orange-300;
+    }
+
+    .card-content {
+      .title {
+        .count-wrapper {
+          .category-count {
+            @apply bg-accent-orange-100 text-accent-orange-900;
+          }
+        }
+      }
+    }
+  }
+
+  &.status-error {
+    &::before {
+      @apply bg-semantic-error-500;
+    }
+
+    .card-content {
+      .title {
+        .count-wrapper {
+          .category-count {
+            @apply bg-semantic-error-100 text-semantic-error-800;
+          }
+        }
+      }
+    }
+  }
+
+  &.status-neutral {
+    &::before {
+      @apply bg-neutral-400;
+    }
+
+    .card-content {
+      .title {
+        .count-wrapper {
+          .category-count {
+            @apply bg-neutral-100 text-neutral-950;
+          }
+        }
+      }
+    }
+  }
+
+  &.selected {
+    @apply border-semantic-success-200;
+  }
+
+  .card-content {
+    @apply flex flex-col gap-[4px] w-full;
+
+    .title {
+      @apply flex text-neutral-950 items-center justify-between sh201;
+
+      h2 {
+        @apply text-neutral-900;
+      }
+
+      .count-wrapper {
+        @apply flex items-center gap-2;
+
+        .category-count {
+          @apply px-[6px] py-[1px] rounded-[24px] font-normal text-[12px] leading-[20px] !font-roboto;
+        }
+      }
+    }
+
+    .rating {
+      @apply flex mb-[8px];
+    }
+
+    .intervention {
+      @apply flex items-center text-neutral-500 text-p203 font-sora font-[500] gap-[4px];
+
+      span:first-of-type {
+        @apply font-medium;
+      }
+
+      .intervention-na {
+        @apply bg-surface-200 text-neutral-500 px-2 py-1 rounded-full text-p302;
+      }
+    }
+  }
+}

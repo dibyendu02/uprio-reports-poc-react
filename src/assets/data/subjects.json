@@ -1,0 +1,14 @@
+{
+  "subjects": [
+    {
+      "subjectId": 1,
+      "name": "Maths",
+      "description": "Maths description"
+    },
+    {
+      "subjectId": 2,
+      "name": "Science",
+      "description": "Science description"
+    }
+  ]
+}

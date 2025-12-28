@@ -1,0 +1,29 @@
+{
+  "questionsEvaluation": [
+    {
+      "questionEvaluationId": 1,
+      "userId": 1,
+      "subjectId": 1,
+      "chapterId": 1,
+      "categoryId": 1,
+      "questionId": 1,
+      "status": "CORRECT",
+      "steps": [
+        { "stepId": 1, "status": "CORRECT" },
+        { "stepId": 2, "status": "CORRECT" },
+        { "stepId": 3, "status": "CORRECT" },
+        { "stepId": 4, "status": "CORRECT" }
+      ],
+      "notebookImages": [
+        {
+          "imageId": 1,
+          "imageUrl": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+        },
+        {
+          "imageId": 2,
+          "imageUrl": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+        }
+      ]
+    }
+  ]
+}

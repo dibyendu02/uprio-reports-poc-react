@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand Colors */
+  --brand-primary: #1b8ffc;
+  --brand-secondary: #1fc2ba;
+
+  /* Primary Colors */
+  --primary-50: #edf9ff;
+  --primary-100: #d6efff;
+  --primary-200: #b5e3ff;
+  --primary-300: #83d2ff;
+  --primary-400: #48bcff;
+  --primary-500: #1ebcff;
+  --primary-600: #069fff;
+  --primary-700: #008cff;
+  --primary-800: #086ac5;
+  --primary-900: #0d5b9b;
+  --primary-950: #0e375d;
+
+  /* Secondary Colors */
+  --secondary-50: #f1fcfb;
+  --secondary-100: #cef9f3;
+  --secondary-200: #9ef1e6;
+  --secondary-300: #65e3d7;
+  --secondary-400: #35ccc2;
+  --secondary-500: #1fc2ba;
+  --secondary-600: #148d8a;
+  --secondary-700: #147170;
+  --secondary-800: #155a5a;
+  --secondary-900: #164b4a;
+  --secondary-950: #062c2d;
+
+  /* Accent Colors - Green */
+  --accent-green-50: #edfff0;
+  --accent-green-100: #d5ffde;
+  --accent-green-200: #aeffbf;
+  --accent-green-300: #70ff90;
+  --accent-green-400: #2bfd57;
+  --accent-green-500: #00e230;
+  --accent-green-600: #00c024;
+  --accent-green-700: #009620;
+  --accent-green-800: #06751f;
+  --accent-green-900: #07601c;
+  --accent-green-950: #00370c;
+
+  /* Accent Colors - Purple */
+  --accent-purple-50: #faf5ff;
+  --accent-purple-100: #f4e9fe;
+  --accent-purple-200: #ead7fd;
+  --accent-purple-300: #dab7fb;
+  --accent-purple-400: #c389f7;
+  --accent-purple-500: #a54eef;
+  --accent-purple-600: #983be2;
+  --accent-purple-700: #8129c7;
+  --accent-purple-800: #6d27a2;
+  --accent-purple-900: #5a2083;
+  --accent-purple-950: #3d0b60;
+
+  /* Accent Colors - Orange */
+  --accent-orange-50: #fef7ee;
+  --accent-orange-100: #fdedd7;
+  --accent-orange-200: #fad6ae;
+  --accent-orange-300: #f6b97b;
+  --accent-orange-400: #f29245;
+  --accent-orange-500: #ee7320;
+  --accent-orange-600: #df5a17;
+  --accent-orange-700: #b94415;
+  --accent-orange-800: #933619;
+  --accent-orange-900: #772f17;
+  --accent-orange-950: #40160a;
+
+  /* Semantic - Success */
+  --semantic-success-50: #f1faeb;
+  --semantic-success-100: #ddf4d3;
+  --semantic-success-200: #bfeaac;
+  --semantic-success-300: #96db7b;
+  --semantic-success-400: #71ca51;
+  --semantic-success-500: #55b635;
+  --semantic-success-600: #3d8b25;
+  --semantic-success-700: #306b20;
+  --semantic-success-800: #2a551f;
+  --semantic-success-900: #26491e;
+  --semantic-success-950: #10270c;
+
+  /* Semantic - Error */
+  --semantic-error-50: #fdf3f3;
+  --semantic-error-100: #fbe5e5;
+  --semantic-error-200: #f9cfcf;
+  --semantic-error-300: #f4adad;
+  --semantic-error-400: #ec7d7d;
+  --semantic-error-500: #e26060;
+  --semantic-error-600: #cc3636;
+  --semantic-error-700: #ab2a2a;
+  --semantic-error-800: #8e2626;
+  --semantic-error-900: #762626;
+  --semantic-error-950: #400f0f;
+
+  /* Semantic - Warning */
+  --semantic-warning-50: #fbfcea;
+  --semantic-warning-100: #fafac7;
+  --semantic-warning-200: #f6f392;
+  --semantic-warning-300: #f0e654;
+  --semantic-warning-400: #ead425;
+  --semantic-warning-500: #e1c319;
+  --semantic-warning-600: #bc9512;
+  --semantic-warning-700: #966c12;
+  --semantic-warning-800: #7c5517;
+  --semantic-warning-900: #6a4719;
+  --semantic-warning-950: #3e260a;
+
+  /* Surface Colors */
+  --surface-50: #f6f6f9;
+  --surface-100: #ededf1;
+  --surface-200: #d7d8e0;
+  --surface-300: #b4b6c5;
+  --surface-400: #8b8da5;
+  --surface-500: #6c6e8b;
+  --surface-600: #575972;
+  --surface-700: #47485d;
+  --surface-800: #3d3e4f;
+  --surface-900: #363744;
+  --surface-950: #101014;
+
+  /* Neutral Colors */
+  --neutral-50: #f6f6f9;
+  --neutral-100: #ededf1;
+  --neutral-200: #d7d8e0;
+  --neutral-300: #b4b6c5;
+  --neutral-400: #8b8da5;
+  --neutral-500: #6c6e8b;
+  --neutral-600: #575972;
+  --neutral-700: #47485d;
+  --neutral-800: #3d3e4f;
+  --neutral-900: #363744;
+  --neutral-950: #101014;
+}
+
+@layer base {
+  html {
+    font-size: 16px;
+  }
+}
+
+@layer utilities {
+  .bg-dotted-pattern {
+    background-color: #ededf1;
+    background-image: radial-gradient(circle, #dcdce1 2px, transparent 2px);
+    background-size: 20px 20px;
+  }
+}
+
+@keyframes draw {
+  from {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Hide scrollbars for all elements */
+* {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+/* For Webkit browsers (Chrome, Safari, etc.) */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px); /* Slight slide-in effect */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.animate-draw {
+  animation: draw 0.8s ease forwards;
+}
+
+/* Add line colors */
+.line-emerald {
+  stroke: #10b981;
+}
+
+.line-orange {
+  stroke: #f97316;
+}
+
+.line-red {
+  stroke: #ef4444;
+}
+
+.line-gray {
+  stroke: #6b7280;
+  .hidden {
+    display: none !important;
+  }
+}
+
+
+@font-face {
+  font-family: inter;
+  src: url("../public//Inter/Inter_18pt-Regular.ttf");
+}
+
+.inter{
+  font-family: inter;
+}

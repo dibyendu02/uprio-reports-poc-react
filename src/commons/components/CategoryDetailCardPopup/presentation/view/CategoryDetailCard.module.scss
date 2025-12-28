@@ -1,0 +1,30 @@
+.category-detail-card {
+  @apply relative bg-white rounded-[12px] h-[calc(100vh-120px)] flex flex-col;
+
+  .card-header {
+    @apply flex items-center justify-between w-full h-[56px] bg-white p-[16px] mb-[12px] rounded-tr-xl;
+    box-shadow: 0px 16px 32px -4px #0c0c0d0d;
+
+    h3 {
+      @apply sh102 text-neutral-950;
+    }
+
+    img {
+      @apply cursor-pointer;
+    }
+  }
+
+  .card-content {
+    @apply flex flex-col gap-[8px] py-[8px] px-[4px] m-2 mt-0 rounded-[8px] overflow-y-auto flex-1;
+
+    .title {
+      h3 {
+        @apply sh201 text-neutral-700;
+      }
+    }
+
+    .questions-wrap {
+      @apply flex flex-col gap-[16px];
+    }
+  }
+}

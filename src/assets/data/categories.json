@@ -1,0 +1,32 @@
+{
+  "categories": [
+    {
+      "categoryId": 1,
+      "subjectId": 1,
+      "chapterId": 1,
+      "name": "Converting decimal number to fraction",
+      "description": ""
+    },
+    {
+      "categoryId": 2,
+      "subjectId": 1,
+      "chapterId": 1,
+      "name": "Arranging decimal number in ascending or descending order",
+      "description": ""
+    },
+    {
+      "categoryId": 3,
+      "subjectId": 1,
+      "chapterId": 1,
+      "name": "Addition of decimal numbers",
+      "description": ""
+    },
+    {
+      "categoryId": 4,
+      "subjectId": 1,
+      "chapterId": 1,
+      "name": "Statement based problems involving a+b=c",
+      "description": ""
+    }
+  ]
+}

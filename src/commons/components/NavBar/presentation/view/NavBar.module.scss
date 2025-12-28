@@ -1,0 +1,56 @@
+.navbar-container {
+  @apply hidden md:flex flex-col items-center justify-between h-full bg-primary-1000 p-[24px] text-neutral-200 rounded-[12px] z-10 m-4;
+  width: fit-content;
+  position: absolute; // Make the navbar stick to the left side of the screen
+  top: 0;
+  left: 0;
+  height: calc(100vh - 32px); // Set height to fill the entire viewport height
+
+  .nav-top,
+  .nav-bottom {
+    @apply flex flex-col items-center gap-[24px];
+
+    .logo-wrap {
+      img {
+        @apply w-[48px] h-[48px] rounded-[8px];
+      }
+    }
+
+    .nav-divider {
+      @apply w-[44px] h-[2px] rounded-[2px] bg-neutral-900;
+    }
+
+    .nav-section {
+      @apply flex flex-col items-center gap-[12px];
+      width: 100%;
+    }
+
+    .nav-item {
+      @apply flex items-center justify-center p-[10px] text-gray-400 cursor-pointer rounded-[8px] transition-colors duration-200;
+
+      &.text {
+        @apply text-neutral-400 p-0 uppercase;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: 0.4px;
+        font-family: Sora, sans-serif;
+      }
+
+      img {
+        @apply w-[24px] h-[24px];
+      }
+
+      &:hover {
+        @apply text-white bg-gray-600;
+      }
+
+      &.active {
+        @apply text-white bg-primary-500;
+      }
+    }
+  }
+
+  .nav-bottom {
+    @apply gap-[8px];
+  }
+}

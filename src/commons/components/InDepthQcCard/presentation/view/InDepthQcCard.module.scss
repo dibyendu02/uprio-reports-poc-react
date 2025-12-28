@@ -1,0 +1,137 @@
+.qc-card {
+  @apply relative bg-white rounded-[12px] p-3 border-[2px] border-transparent transition-all duration-200;
+
+  // Only apply shadow and hover effects when not mobile
+  &:not(.mobile) {
+    @apply shadow-md;
+
+    &:hover:not(.selected) {
+      @apply border-primary-100;
+    }
+  }
+
+  &.selected {
+    @apply border-semantic-error-300 border-solid;
+
+    // Only apply box shadow when not mobile
+    &:not(.mobile) {
+      box-shadow: 0px 16px 32px -4px rgba(12, 12, 13, 0.1);
+    }
+
+    &::before {
+      content: "";
+      @apply absolute top-[12px] h-[calc(100%-24px)] left-[-2px] w-1 bg-semantic-error-500 rounded-r;
+    }
+
+    &.improved {
+      @apply border-semantic-success-300 border-solid;
+      &::before {
+        @apply bg-semantic-success-500;
+      }
+    }
+
+    &.same-as-before {
+      @apply border-accent-orange-300 border-solid;
+      &::before {
+        @apply bg-accent-orange-400;
+      }
+    }
+  }
+
+  &.mobile {
+    @apply bg-neutral-50;
+
+    .intervention-section {
+      .metrics-grid {
+        @apply grid grid-cols-1 gap-8 rounded-[8px] bg-white;
+
+        .metric-item {
+          @apply pl-3 relative;
+
+          &:not(:first-child) {
+            &::before {
+              content: "";
+              @apply absolute top-[-1rem] left-[12px] h-[1px] w-[calc(100%-24px)] bg-neutral-50;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .card-header {
+    @apply flex items-center justify-between mb-4;
+
+    .title {
+      @apply font-semibold text-gray-900 sh201;
+    }
+
+    .redirect-icon {
+      @apply text-gray-400;
+    }
+  }
+
+  .intervention-section {
+    @apply mb-4 last:mb-0;
+
+    .section-title {
+      @apply font-medium text-neutral-900 mb-1 p303;
+    }
+
+    .metrics-grid {
+      @apply grid grid-cols-3 gap-8 relative border border-neutral-50 py-3 rounded-[8px];
+
+      .metric-item {
+        @apply relative flex flex-col gap-2;
+
+        &:first-child {
+          @apply pl-3;
+        }
+
+        &:not(:last-child)::after {
+          content: "";
+          @apply absolute top-0 right-0 h-full w-[1px] bg-neutral-50;
+        }
+      }
+    }
+
+    .metric-item {
+      @apply flex flex-col gap-2;
+
+      .metric-value-wrapper {
+        @apply flex items-center gap-2;
+      }
+
+      .metric-circle {
+        @apply flex items-center justify-center h-[22px] px-2 rounded-full font-semibold text-lg;
+      }
+      .metric-value {
+        @apply text-[12px];
+      }
+
+      .percentage {
+        @apply text-gray-600 text-[12px];
+      }
+
+      .metric-label {
+        @apply text-gray-600 p301;
+      }
+
+      .bg-neutral {
+        @apply bg-neutral-100 text-neutral-950;
+      }
+
+      .bg-orange {
+        @apply bg-orange-100 text-orange-700;
+      }
+
+      .bg-pink {
+        @apply bg-red-100 text-red-700;
+      }
+
+      .bg-success {
+        @apply bg-green-100 text-green-700;
+      }
+    }
+  }
+}

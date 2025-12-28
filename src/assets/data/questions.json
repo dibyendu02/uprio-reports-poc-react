@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "questionId": 1,
+      "subjectId": 1,
+      "chapterId": 1,
+      "categoryId": 1,
+      "question": "Express -3/5 as a rational number with denominator 20",
+      "stepsRequired": [
+        {
+          "stepId": 1,
+          "step": "Identify whether to Multiply or Divide"
+        },
+        {
+          "stepId": 2,
+          "step": "Multiply or Divide to find the required number"
+        },
+        {
+          "stepId": 3,
+          "step": "Multiply or Divide P & Q with the number from Step 2"
+        }
+      ]
+    }
+  ]
+}

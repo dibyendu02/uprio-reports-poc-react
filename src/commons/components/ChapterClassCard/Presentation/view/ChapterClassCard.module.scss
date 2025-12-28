@@ -1,0 +1,87 @@
+.chapter-class-card {
+  @apply relative bg-white rounded-[12px];
+
+  .card-header {
+    @apply mb-[12px];
+
+    .sub-title {
+      @apply flex items-center justify-between;
+
+      .date {
+        @apply p302 text-neutral-300;
+      }
+
+      .attendance {
+        @apply p302 text-neutral-300;
+      }
+    }
+
+    .title {
+      @apply flex items-center justify-between;
+
+      .type {
+        @apply text-sh201 text-neutral-950;
+      }
+    }
+  }
+
+  .card-content {
+    @apply flex flex-col p-[8px] bg-neutral-50 rounded-[8px];
+
+    .card-item {
+      @apply flex items-center justify-start p302 text-neutral-300;
+
+      &:not(:last-child) {
+        @apply mb-[12px];
+      }
+
+      .icon-wrap {
+        @apply w-[32px] h-[32px] p-[7px] rounded-[50%] border-[1px] border-solid border-neutral-100 mr-[8px];
+
+        img {
+          @apply w-[18px] h-[18px];
+        }
+      }
+
+      span {
+        @apply text-p202 text-neutral-600 mr-[4px];
+
+        &.count,
+        &.status {
+          @apply p203 text-neutral-950;
+        }
+
+        &.status {
+          &.success {
+            @apply text-semantic-success-600;
+          }
+
+          &.error {
+            @apply text-semantic-error-600;
+          }
+        }
+      }
+    }
+
+    .sheets-wrap {
+      @apply flex flex-col pl-[8px];
+
+      .sheet-item {
+        @apply flex items-center gap-[4px] text-p301 text-neutral-500 font-poppins py-[8px];
+
+        .bullet {
+          @apply relative w-[10px] h-[10px] rounded-[50%] bg-primary-800 border-[1.5px] border-solid border-primary-100 mr-[4px];
+
+          &::before {
+            content: "";
+            @apply absolute bottom-[14px] left-[calc(50%-.75px)] h-[16px] w-[1.5px] bg-neutral-200 rounded-[50%];
+          }
+        }
+
+        .sheet-count {
+          @apply p303 text-neutral-950;
+        }
+      }
+    }
+  }
+}

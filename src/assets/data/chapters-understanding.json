@@ -1,0 +1,54 @@
+{
+  "chaptersUnderstanding": [
+    {
+      "chapterUnderstandingId": 1,
+      "chapterId": 1,
+      "subjectId": 1,
+      "userId": 1,
+      "evaluations": [
+        {
+          "id": 1,
+          "name": "Well Understood",
+          "rating": 5,
+          "interventions": null,
+          "categoryIds": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": 2,
+          "name": "Understood but student makes silly mistakes",
+          "rating": 3,
+          "interventions": [
+            {
+              "interventionId": 2,
+              "name": "Practice"
+            }
+          ],
+          "categoryIds": [7, 11]
+        },
+        {
+          "id": 3,
+          "name": "Requires further reinforcement",
+          "rating": 2,
+          "interventions": [
+            {
+              "interventionId": 1,
+              "name": "Re-explain"
+            },
+            {
+              "interventionId": 2,
+              "name": "Practice"
+            }
+          ],
+          "categoryIds": [9, 11]
+        },
+        {
+          "id": 4,
+          "name": "Categories not assessed in class",
+          "rating": 0,
+          "interventions": null,
+          "categoryIds": null
+        }
+      ]
+    }
+  ]
+}

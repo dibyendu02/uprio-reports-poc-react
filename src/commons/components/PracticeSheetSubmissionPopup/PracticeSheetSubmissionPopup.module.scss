@@ -1,0 +1,38 @@
+.metric-item {
+  @apply flex flex-col gap-2 w-1/2;
+
+  .metric-value-wrapper {
+    @apply flex items-center gap-2;
+  }
+
+  .metric-circle {
+    @apply flex items-center justify-center h-[22px] px-2 rounded-full font-semibold text-lg;
+  }
+  .metric-value {
+    @apply text-[12px];
+  }
+
+  .percentage {
+    @apply text-gray-600 text-[12px];
+  }
+
+  .metric-label {
+    @apply text-gray-600 p301;
+  }
+
+  .bg-neutral {
+    @apply bg-neutral-100 text-neutral-950;
+  }
+
+  .bg-orange {
+    @apply bg-orange-100 text-orange-700;
+  }
+
+  .bg-pink {
+    @apply bg-red-100 text-red-700;
+  }
+
+  .bg-success {
+    @apply bg-green-100 text-green-700;
+  }
+}

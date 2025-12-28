@@ -1,0 +1,127 @@
+.mobile-question-category-card {
+  @apply relative bg-white rounded-[12px] p-[12px] cursor-pointer;
+
+  &.status-success {
+    &::before {
+      @apply bg-semantic-success-500;
+    }
+
+    .card-content {
+      .title {
+        .count-wrapper {
+          .category-count {
+            @apply bg-semantic-success-100 text-semantic-success-800;
+          }
+        }
+      }
+    }
+  }
+
+  &.status-orange {
+    &::before {
+      @apply bg-accent-orange-300;
+    }
+
+    .card-content {
+      .title {
+        .count-wrapper {
+          .category-count {
+            @apply bg-accent-orange-100 text-accent-orange-900;
+          }
+        }
+      }
+    }
+  }
+
+  &.status-error {
+    &::before {
+      @apply bg-semantic-error-500;
+    }
+
+    .card-content {
+      .title {
+        .count-wrapper {
+          .category-count {
+            @apply bg-semantic-error-100 text-semantic-error-800;
+          }
+        }
+      }
+    }
+  }
+
+  &.status-neutral {
+    &::before {
+      @apply bg-neutral-400;
+    }
+
+    .card-content {
+      .title {
+        .count-wrapper {
+          .category-count {
+            @apply bg-neutral-100 text-neutral-950;
+          }
+        }
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    @apply absolute top-[12px] bottom-[12px] left-[-2px] w-[4px] rounded-tr-[12px] rounded-br-[12px] bg-semantic-success-500;
+  }
+
+  .card-content {
+    @apply flex flex-col gap-[4px];
+
+    .content-header {
+      .title {
+        @apply flex justify-between items-center font-semibold text-neutral-900 text-h102 max-w-[97%];
+
+        .left-wrap {
+          @apply flex items-center gap-[4px];
+
+          h2 {
+            @apply text-neutral-950 sh201;
+          }
+        }
+
+        .right-wrap {
+          @apply flex items-center gap-[8px];
+        }
+      }
+
+      .rating {
+        @apply flex gap-0 mb-[8px];
+
+        .filled-star {
+          color: #f4c150; // gold color for filled stars
+        }
+
+        .empty-star {
+          color: #e0e0e0; // light gray for empty stars
+        }
+      }
+
+      .intervention {
+        @apply flex items-center text-neutral-500 text-p203 gap-2;
+
+        span:first-of-type {
+          @apply font-medium p202 text-neutral-500;
+        }
+
+        .intervention-na {
+          @apply bg-surface-200 text-neutral-500 px-2 py-1 rounded-full text-p302;
+        }
+      }
+    }
+
+    // List of categories
+    .categories-list {
+      @apply mt-[20px] gap-[16px] flex flex-col;
+
+      .category-card {
+        @apply border-[2px] border-neutral-100 rounded-[12px];
+      }
+    }
+  }
+}

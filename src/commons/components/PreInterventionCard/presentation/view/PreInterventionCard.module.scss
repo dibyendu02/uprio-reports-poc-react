@@ -1,0 +1,103 @@
+.pre-intervention-card {
+  @apply relative bg-white rounded-[12px] pl-4 pr-3 py-3 cursor-pointer flex items-center;
+  transition: all 0.2s ease-in-out;
+
+  &::before {
+    content: "";
+    @apply absolute top-4 bottom-4 left-[-2px] w-1 rounded-r bg-accent-purple-400;
+  }
+
+  &.selected {
+    @apply md:border-[2px] border-accent-purple-200;
+    // box-shadow: 0px 16px 32px -4px rgba(12, 12, 13, 0.1);
+
+    &::before {
+      content: "";
+      @apply absolute top-4 bottom-4 left-[-2px] w-1 md:w-[4px] md:bg-accent-purple-400 rounded-r;
+    }
+  }
+
+  .card-content {
+    @apply flex flex-col gap-[4px] w-full;
+
+    .title {
+      @apply flex text-neutral-950 items-center justify-between sh201 mb-4;
+
+      h2 {
+        @apply text-neutral-900;
+      }
+
+      .count-wrapper {
+        @apply flex items-center gap-2;
+
+        .count {
+          @apply text-neutral-500 text-sm;
+        }
+      }
+    }
+
+    .categories {
+      @apply space-y-3;
+
+      .category-item {
+        @apply bg-white rounded-lg border border-neutral-100 p-3;
+
+        &.status-success {
+          .category-header {
+            .category-count {
+              @apply bg-semantic-success-100 text-semantic-success-800;
+            }
+          }
+        }
+
+        &.status-orange {
+          .category-header {
+            .category-count {
+              @apply bg-accent-orange-100 text-accent-orange-900;
+            }
+          }
+        }
+
+        &.status-error {
+          .category-header {
+            .category-count {
+              @apply bg-semantic-error-100 text-semantic-error-800;
+            }
+          }
+        }
+
+        &.status-neutral {
+          .category-header {
+            .category-count {
+              @apply bg-neutral-100 text-neutral-950;
+            }
+          }
+        }
+
+        .category-content {
+          @apply space-y-2;
+        }
+
+        .category-title {
+          @apply sh201;
+        }
+
+        .category-header {
+          @apply flex items-center justify-between;
+
+          span {
+            @apply text-neutral-900 max-w-[180px];
+          }
+
+          .category-count {
+            @apply px-[6px] py-[1px] rounded-[24px] font-normal text-[12px] leading-[20px] !font-roboto;
+          }
+        }
+
+        .rating {
+          @apply flex gap-1;
+        }
+      }
+    }
+  }
+}

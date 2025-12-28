@@ -1,0 +1,102 @@
+{
+  "classDetails": [
+    {
+      "classDetailId": 1,
+      "userId": 1,
+      "subjectId": 1,
+      "chapterId": 1,
+      "name": "Class 1",
+      "type": "TEACH_CLASS",
+      "description": "Class 1 description",
+      "timestamp": "2024-05-19T00:00:00.000Z",
+      "attendance": "ABSENT",
+      "notebookEvaluations": 2,
+      "practiceSheets": {
+        "status": "SUBMITTED",
+        "total": 2,
+        "completed": 2,
+        "sheets": [
+          {
+            "sheetId": 1,
+            "name": "Sheet 1",
+            "status": "SUBMITTED",
+            "total": 12,
+            "completed": 10
+          },
+          {
+            "sheetId": 2,
+            "name": "Sheet 2",
+            "status": "SUBMITTED",
+            "total": 8,
+            "completed": 6
+          }
+        ]
+      }
+    },
+    {
+      "classDetailId": 2,
+      "userId": 1,
+      "subjectId": 1,
+      "chapterId": 1,
+      "name": "Class 1",
+      "type": "TEACH_CLASS",
+      "description": "Class 2 description",
+      "timestamp": "2024-05-20T00:00:00.000Z",
+      "attendance": "PRESENT",
+      "notebookEvaluations": 2,
+      "practiceSheets": {
+        "status": "SUBMITTED",
+        "total": 2,
+        "completed": 2,
+        "sheets": [
+          {
+            "sheetId": 1,
+            "name": "Sheet 1",
+            "status": "SUBMITTED",
+            "total": 12,
+            "completed": 10
+          },
+          {
+            "sheetId": 2,
+            "name": "Sheet 2",
+            "status": "SUBMITTED",
+            "total": 8,
+            "completed": 6
+          }
+        ]
+      }
+    },
+    {
+      "classDetailId": 3,
+      "subjectId": 1,
+      "chapterId": 1,
+      "name": "Class 2",
+      "type": "EVALUATION_CLASS",
+      "description": "Class 3 description",
+      "timestamp": "2024-05-21T00:00:00.000Z",
+      "attendance": "PRESENT",
+      "notebookEvaluations": 2,
+      "practiceSheets": {
+        "status": "SUBMITTED",
+        "total": 2,
+        "completed": 2,
+        "sheets": [
+          {
+            "sheetId": 1,
+            "name": "Sheet 1",
+            "status": "SUBMITTED",
+            "total": 12,
+            "completed": 10
+          },
+          {
+            "sheetId": 2,
+            "name": "Sheet 2",
+            "status": "SUBMITTED",
+            "total": 8,
+            "completed": 6
+          }
+        ]
+      }
+    }
+  ]
+}
